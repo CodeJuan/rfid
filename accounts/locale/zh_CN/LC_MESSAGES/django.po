@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 10:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: models.py:11
+msgid "user"
+msgstr ""
+
+#: templates/userena/signin_form.html:4 templates/userena/signin_form.html:60
+msgid "Login"
+msgstr "登录"
+
+#: templates/userena/signin_form.html:13
+msgid "Incorrect username or password"
+msgstr "用户名 / 密码错误"
+
+#: templates/userena/signin_form.html:27
+msgid "Welcome!"
+msgstr "欢迎!"
+
+#: templates/userena/signin_form.html:63 templates/userena/signin_form.html:64
+msgid "forgot-password"
+msgstr "忘记密码"
+
+#: templates/userena/signup_form.html:5 templates/userena/signup_form.html:92
+msgid "Sign Up"
+msgstr "注册"
+
+#: templates/userena/signup_form.html:29
+msgid "Create your personal account!"
+msgstr "创建您的私人帐号"
+
+#: templates/userena/signup_form.html:56
+msgid ""
+"You will occasionally receive account related emails. We promise not to "
+"share your email with anyone."
+msgstr "您偶尔会收到帐号相关的邮件, 我们承诺不向第三方公开您的邮箱"
+
+#: templates/userena/signup_form.html:71
+msgid "Use at least one lowercase letter, one numeral, and seven characters."
+msgstr "请使用最少 1 个小写字母, 一个数字, 7 个字母."

@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}
-<title> {% trans "Login" %} </title>
-{% endblock %}
+{% block title %} {% trans "Login" %} {% endblock %}
 
 {% block content %}
 
@@ -59,7 +57,7 @@
 
   </fieldset>
 
-  <input type="submit" class="btn btn-lg btn-primary btn-block" tabindex="4" value="{% trans "Signin" %}" />
+  <input type="submit" class="btn btn-lg btn-primary btn-block" tabindex="4" value="{% trans "Login" %}" />
 
   <p class="forgot-password">
     <a href="{% url "userena_password_reset" %}" title="{% trans "forgot-password" %}">
