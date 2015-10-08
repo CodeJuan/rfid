@@ -87,6 +87,10 @@ accounts/urls.py|6 col 5| E128 continuation line under-indented for visual inden
 ## 注意
 
 1. base 不作为 installed app 存在
+2. 数据库如果是 mysql, 需要使用 utf8 编码, 若使用更长的 utf8mb4, 创建是报错.
+
+    `CREATE DATABASE IF NOT EXISTS happy10 DEFAULT CHARSET utf8 COLLATE utf8_general_ci;`
+3. mysql 数据库, install 时报 1005 错误, 是外键导致. 重复创建 2 次即可.
 
 ## Build Dev Env
 
