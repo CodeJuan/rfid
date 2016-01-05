@@ -3,3 +3,4 @@
 django==1.8
 django-grappelli==2.7.1
 django-userena==1.4.1
+django-tastypie
