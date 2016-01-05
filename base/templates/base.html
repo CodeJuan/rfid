@@ -2,6 +2,7 @@
 <html>
 
 {% load staticfiles %}
+{% load i18n %}
 
 <head>
 
@@ -29,11 +30,52 @@
 
 <body>
 
+    <!-- start: Header -->
     {% include 'navbar.html' %}
+    <!-- end: Header -->
 
-    <div class="container">
-    {% block content %}{% endblock %}
+    <!-- start: Container -->
+    <div class="container-fluid-full">
+        <div class="row-fluid">
+            <!-- start: Main Menu -->
+            {% include 'sidebar.html' %}
+            <!-- end: Main Menu -->
+            <!-- start: Content -->
+            <div id="content" class="span10">
+            {% block content %}{% endblock %}
+            </div>
+            <!-- end: Content -->  
+        </div> 
     </div>
+    <!-- end: Container -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            {% for link, name in nav_list %}
+            <li><a href="{{ link }}"> {{ name }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user.username }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'userena_signout' %}">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    </a>
+                </li>
+            {% else %}
+                <li> <a href="{% url 'userena_signin' %}">{% trans "Login" %}</a> </li>
+                <li> <a href="{% url 'userena_signup' %}">{% trans "Sign Up"  %}</a> </li>
+            {% endif %}
+        </ul>
+    </div><!-- /.navbar-collapse -->
+
 
 
     <!-- common js -->
