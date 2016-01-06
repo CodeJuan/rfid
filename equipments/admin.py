@@ -4,10 +4,10 @@ from equipments.models import RfidReader, Ant
 
 
 class RfidReaderAdmin(admin.ModelAdmin):
-    list_display = ('IP', 'port', 'loc')
+    list_display = ('shop', 'ip', 'port')
 
 class AntAdmin(admin.ModelAdmin):
-    list_display = ('seq', 'reader', 'status')
+    list_display = ('reader', 'seq', 'status')
 
 
 admin.site.register(RfidReader, RfidReaderAdmin)

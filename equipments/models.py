@@ -1,12 +1,16 @@
 # -*- coding:utf-8 -*-
 from django.db import models
-from warehouse.models import Warehouse
+from shops.models import Shop
 
 
 class RfidReader(models.Model):
-    IP = models.GenericIPAddressField(protocol='IPv4', max_length=100, verbose_name='IP')
+    ip = models.GenericIPAddressField(protocol='IPv4', max_length=100,
+                                      verbose_name='IP')
     port = models.PositiveIntegerField(u'端口')
-    loc = models.ForeignKey(Warehouse, verbose_name=u'所属仓库')
+    shop = models.ForeignKey(Shop, verbose_name=u'店铺')
+
+    def __unicode__(self):
+        return u'%s-%s' % (self.shop, self.ip)
 
     class Meta:
         verbose_name = u'RFID 读写器'
@@ -16,10 +20,14 @@ class RfidReader(models.Model):
 class Ant(models.Model):
     seq = models.IntegerField(u'天线号')
     reader = models.ForeignKey(RfidReader, verbose_name=u'RFID 读写器')
-    status = models.IntegerField(u'状态', choices=(
-        (0, u'启用'),
-        (1, u'停用'),
+    status = models.IntegerField(u'工作模式', choices=(
+        (0, u'停用'),
+        (1, u'监控柜台'),
+        (2, u'日常操作'),
         ))
+
+    def __unicode__(self):
+        return u'%s-%s' % (self.reader, self.seq)
 
     class Meta:
         verbose_name = u'RFID 天线'
