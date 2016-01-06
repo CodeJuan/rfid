@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block title %} RFID 列表 {% endblock %}
+
+
+{% block content %}
+
+<h1>RFID 列表</h1>
+<div class="RFIDls">
+    <form id="RFIDlist" action="">
+        <select name="address" form="RFIDlist" class="select-down">
+            <option value="">北京</option>
+            <option value="">上海</option>
+            <option value="">杭州</option>
+            <option value="">福建</option>
+        </select>
+        <select name="address" form="RFIDlist" class="select-down">
+            <option value="">在库</option>
+            <option value="">待销售</option>
+            <option value="">已售</option>
+            <option value="">调拨中</option>
+        </select>
+        
+        <button type="submit" class="btn"> 查询</button>
+    </form>
+</div>
+
+<p class="RFIDsupervise-data">
+	异常数据： <span class="error">2</span>
+	应监控数据：<span class="supervise">1000</span>
+	实时监控：<span class="current">999</span>
+</p>
+
+{% endblock %}

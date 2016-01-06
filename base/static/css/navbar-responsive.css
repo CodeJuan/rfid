@@ -70,7 +70,7 @@
 
 	/* Tablet Portrait (devices and browsers)
 ====================================================================== */
-@media only screen and (min-width: 768px) and (max-width: 979px) {
+@media only screen and (min-width: 768px) and (max-width: 979px) {  					/* !!!!!navbar 有问题!!				*/
 	
 	.container-fluid-full {
 		overflow: hidden;

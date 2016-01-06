@@ -1,0 +1,46 @@
+
+/*    page : RFIDsupervise   */
+
+h1 {
+    text-align: center;
+}
+
+.select-down {
+    margin-bottom: 0px;
+}
+
+/* form  */
+.RFIDsuper {
+   margin: 30px auto; 
+}
+
+#RFIDsupervise {
+    text-align: center;
+}
+
+#RFIDsupervise button{
+    margin-left: 10%;
+}
+/* data */
+.RFIDsupervise-data span:not(:last-child){
+    margin-right: 5%;
+}
+/* table */
+
+.td-center th, .td-center td{
+    text-align: center;
+}
+span.error{
+    color: #ff0033;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+caption {
+    padding: 10px 0;
+}
+
+.box-content{
+    margin: 30px auto;
+}
+
