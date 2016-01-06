@@ -59,6 +59,7 @@ INSTALLED_APPS = (
     'guardian',
     'easy_thumbnails',
     'accounts',
+    'products',
 )
 
 SITE_ID = 1  # required if contrib.sites is present
