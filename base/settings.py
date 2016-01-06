@@ -60,6 +60,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'accounts',
     'warehouse',
+    'equipments',
     'products',
 )
 
