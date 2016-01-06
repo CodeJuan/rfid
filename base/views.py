@@ -5,3 +5,7 @@ from django.shortcuts import render_to_response
 
 def home(request):
     return render_to_response('home.html', RequestContext(request))
+
+
+def vivian(request):
+    return render_to_response('rfid-account.html', RequestContext(request))

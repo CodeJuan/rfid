@@ -1,10 +1,10 @@
 # -*- coding: utf-8-*-
 from django.contrib import admin
-from warehouse.models import Warehouse
+from shops.models import Shop
 
 
-class WarehouseAdmin(admin.ModelAdmin):
+class ShopAdmin(admin.ModelAdmin):
     list_display = ('name', 'addr', 'addr', 'contact', 'phone', 'status')
 
 
-admin.site.register(Warehouse, WarehouseAdmin)
+admin.site.register(Shop, ShopAdmin)
