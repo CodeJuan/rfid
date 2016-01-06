@@ -40,7 +40,26 @@ caption {
     padding: 10px 0;
 }
 
-.box-content{
+.box-content {
     margin: 30px auto;
 }
 
+
+/*
+ *
+ *   page : product-check
+ * 
+ * */
+
+td.data-fewer {
+    color: #ff0000;
+}
+
+td.data-more {
+    color: #00dd00;
+} 
+
+#product-check caption {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
