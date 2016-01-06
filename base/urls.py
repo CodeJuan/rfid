@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^products/', 'products.views.report_rfid'),
     url(r'^getproducts/', 'products.views.get_all_rfid'),
     url(r'^api/', include(RFIDResource().urls)),
+    url(r'^api/v1/report/$', 'monitor.views.post_report'),
 )
 
 
