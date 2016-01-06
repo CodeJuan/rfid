@@ -59,6 +59,7 @@ INSTALLED_APPS = (
     'guardian',
     'easy_thumbnails',
     'accounts',
+    'warehouse',
     'products',
 )
 
