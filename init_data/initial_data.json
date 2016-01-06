@@ -160,7 +160,7 @@
 },
 {
     "fields": {
-        "status": 0,
+        "mode": 0,
         "seq": 1,
         "reader": 1
     },
@@ -169,7 +169,7 @@
 },
 {
     "fields": {
-        "status": 1,
+        "mode": 1,
         "seq": 2,
         "reader": 1
     },
@@ -178,7 +178,7 @@
 },
 {
     "fields": {
-        "status": 1,
+        "mode": 1,
         "seq": 3,
         "reader": 1
     },
@@ -187,7 +187,7 @@
 },
 {
     "fields": {
-        "status": 2,
+        "mode": 2,
         "seq": 1,
         "reader": 2
     },
@@ -196,7 +196,7 @@
 },
 {
     "fields": {
-        "status": 1,
+        "mode": 1,
         "seq": 2,
         "reader": 2
     },

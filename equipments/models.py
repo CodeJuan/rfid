@@ -20,10 +20,10 @@ class RfidReader(models.Model):
 class Ant(models.Model):
     seq = models.IntegerField(u'天线号')
     reader = models.ForeignKey(RfidReader, verbose_name=u'RFID 读写器')
-    status = models.IntegerField(u'工作模式', choices=(
+    mode = models.IntegerField(u'天线用途', choices=(
         (0, u'停用'),
-        (1, u'监控柜台'),
-        (2, u'日常操作'),
+        (1, u'监控'),
+        (2, u'读卡'),
         ))
 
     def __unicode__(self):

@@ -7,7 +7,7 @@ class RfidReaderAdmin(admin.ModelAdmin):
     list_display = ('shop', 'ip', 'port')
 
 class AntAdmin(admin.ModelAdmin):
-    list_display = ('reader', 'seq', 'status')
+    list_display = ('reader', 'seq', 'mode')
 
 
 admin.site.register(RfidReader, RfidReaderAdmin)
