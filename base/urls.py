@@ -6,6 +6,7 @@ from products.api import RFIDResource
 
 urlpatterns = patterns('',
     url(r'^$', 'base.views.home', name='home'),
+    url(r'^vivian', 'base.views.vivian', name='vivian'),
     url(r'^grappelli/', include('grappelli.urls')),  # grappelli
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('userena.urls')),
