@@ -1,16 +1,11 @@
 <div id="sidebar-left" class="span2">
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
-            <li class="active"><a href="#"><span class="hidden-tablet"> 入库 </span></a></li>   
-            <li><a href="#"><span class="hidden-tablet"> RFID监控</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> RFID列表</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 盘点</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 出库</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 上柜 下柜</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 仓库管理</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 部门和员工</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 角色和权限</span></a></li>
-            <li><a href="#"><span class="hidden-tablet"> 设置</span></a></li>       
+
+            {% for link, name in nav_list %}
+            {# <li class="active"> #}
+            <li><a href="{{ link }}"><span class="hidden-tablet">{{ name }}</span></a></li>
+            {% endfor %}
         </ul>
     </div>
 </div>
