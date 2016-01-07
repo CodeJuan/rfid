@@ -7,7 +7,7 @@ from monitor.models import Report
 from monitor.serializers import ReportSerializer
 import redis
 
-redis = Redis(host=os.environ['REDIS_PORT_6379_TCP_ADDR'],
+redis = redis.Redis(host=os.environ['REDIS_PORT_6379_TCP_ADDR'],
               port=os.environ['REDIS_PORT_6379_TCP_PORT'],
               password=os.environ.get('REDIS_PASSWORD'))
 
