@@ -25,7 +25,7 @@
         "is_active": true,
         "is_superuser": true,
         "is_staff": true,
-        "last_login": "2016-01-06T17:05:40.806Z",
+        "last_login": "2016-01-07T02:29:50.465Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$20000$FBTQVuWeUwbm$UDCIs4nYsV4zoXTopu87lwS/cqOZntaQM3gNz0R784Y=",
@@ -41,9 +41,9 @@
         "first_name": "",
         "last_name": "",
         "is_active": true,
-        "is_superuser": false,
-        "is_staff": false,
-        "last_login": null,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2016-01-07T02:30:56.678Z",
         "groups": [],
         "user_permissions": [],
         "password": "pbkdf2_sha256$20000$u9R9lqy6Dz13$1kmo00oXw771ZHV9PzkG84EEWRE7hBbsvXqVQ1aYu7A=",
@@ -70,6 +70,30 @@
     },
     "model": "auth.user",
     "pk": 3
+},
+{
+    "fields": {
+        "expire_date": "2016-01-21T02:00:17.034Z",
+        "session_data": "Njk5ZjVhMWUwZTExM2UyODVlMzcwOWQ5OTQwMGI4OTIzNDIxMjJjZjp7fQ=="
+    },
+    "model": "sessions.session",
+    "pk": "2xbkhh8nos2i5s670ko5w6bo7f1vorz6"
+},
+{
+    "fields": {
+        "expire_date": "2016-01-21T02:14:57.612Z",
+        "session_data": "Njk5ZjVhMWUwZTExM2UyODVlMzcwOWQ5OTQwMGI4OTIzNDIxMjJjZjp7fQ=="
+    },
+    "model": "sessions.session",
+    "pk": "3szhgspu552fl53j0ljjvdbodwb0le8h"
+},
+{
+    "fields": {
+        "expire_date": "2016-01-21T02:30:56.683Z",
+        "session_data": "N2Y2Yjc1N2U0YWI2NjQzYWZjOTY3NmI1NzY1YzcwYjUwMTc0ZDE0Yzp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc2MDhmMDhiNGRmZjlhYjllZmU2MTQyOGVkNWZkMzA5NmE1MWY0NWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0="
+    },
+    "model": "sessions.session",
+    "pk": "xrhis0enswr1s5leaixmuvujvwduezk6"
 },
 {
     "fields": {
@@ -274,5 +298,23 @@
     },
     "model": "admin.logentry",
     "pk": 4
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-01-07T02:30:19.888Z",
+        "object_repr": "vivian",
+        "object_id": "2",
+        "change_message": "\u5df2\u4fee\u6539 is_staff \u548c is_superuser \u3002",
+        "user": [
+            "jackon"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 5
 }
 ]
