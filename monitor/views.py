@@ -5,6 +5,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from monitor.models import Report
 from monitor.serializers import ReportSerializer
+import os
 import redis
 
 redis = redis.Redis(host=os.environ['REDIS_PORT_6379_TCP_ADDR'],
