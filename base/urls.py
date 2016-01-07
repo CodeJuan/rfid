@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),  # grappelli
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('userena.urls')),
+    url(r'^shops/',  include('shops.urls')),
     url(r'^products/', 'products.views.report_rfid'),
     url(r'^getproducts/', 'products.views.get_all_rfid'),
     url(r'^api/', include(RFIDResource().urls)),
