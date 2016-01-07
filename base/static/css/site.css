@@ -63,3 +63,22 @@ td.data-more {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
+
+/*
+ *
+ *  page : shops
+ *
+ **/
+.shops-p {
+    line-height: 100%;
+}
+
+.shops-p .h1-title {
+    float: right; 
+    font-size: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin-right: 45% ;
+    vertical-align: middle;
+}
+
