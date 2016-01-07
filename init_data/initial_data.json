@@ -126,7 +126,7 @@
     "fields": {
         "status": 0,
         "name": "\u9f99\u51e4\u73e0\u5b9d",
-        "admin": [
+        "owner": [
             "jackon"
         ],
         "phone": "15166668888",
@@ -140,7 +140,7 @@
     "fields": {
         "status": 0,
         "name": "\u9f99\u51e4\u73e0\u5b9d",
-        "admin": [
+        "owner": [
             "vivian"
         ],
         "phone": "18720202020",
@@ -154,7 +154,7 @@
     "fields": {
         "status": 1,
         "name": "\u5468\u5927\u798f",
-        "admin": [
+        "owner": [
             "admin-0"
         ],
         "phone": "13800001111",
