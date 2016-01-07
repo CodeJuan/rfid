@@ -11,20 +11,21 @@
         <!-- start: Header Menu -->
         <div class="nav-no-collapse header-nav">
             <ul class="nav pull-right">
-                <!-- start: User Dropdown -->
-                <li class="dropdown">
-                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="halflings-icon white user"></i>Jackon <span class="caret"></span>
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user.username }}
                     </a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-menu-title">
-                         <span>Account Settings</span>
-                        </li>
-                        <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-                        <li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
-                    </ul>
                 </li>
-            <!-- end: User Dropdown -->
+                <li>
+                    <a href="{% url 'userena_signout' %}">
+                        退出
+                    </a>
+                </li>
+            {% else %}
+                <li> <a href="{% url 'userena_signin' %}">{% trans "Login" %}</a> </li>
+                <li> <a href="{% url 'userena_signup' %}">{% trans "Sign Up"  %}</a> </li>
+            {% endif %}
             </ul>
         </div>
         <!-- end: Header Menu -->

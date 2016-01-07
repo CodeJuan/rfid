@@ -57,35 +57,17 @@
             <li><a href="{{ link }}"> {{ name }}</a></li>
             {% endfor %}
         </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            {% if user.is_authenticated %}
-                <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user.username }}
-                    </a>
-                </li>
-                <li>
-                    <a href="{% url 'userena_signout' %}">
-                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                    </a>
-                </li>
-            {% else %}
-                <li> <a href="{% url 'userena_signin' %}">{% trans "Login" %}</a> </li>
-                <li> <a href="{% url 'userena_signup' %}">{% trans "Sign Up"  %}</a> </li>
-            {% endif %}
-        </ul>
     </div><!-- /.navbar-collapse -->
 
     <!-- common js -->
-    <script src="../static/js/jquery-1.9.1.min.js"></script>
-    <script src="../static/js/jquery.ui.touch-punch.js"></script>
-    <script src="../static/js/modernizr.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/jquery.chosen.min.js"></script>
-    <script src="../static/js/jquery.uniform.min.js"></script>
-    <script src="../static/js/jquery.iphone.toggle.js"></script>
-    <script src="../static/js/retina.js"></script>
+    <script src="{% static "js/jquery-1.9.1.min.js" %}"></script>
+    <script src="{% static "js/jquery.ui.touch-punch.js" %}"></script>
+    <script src="{% static "js/modernizr.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/jquery.chosen.min.js" %}"></script>
+    <script src="{% static "js/jquery.uniform.min.js" %}"></script>
+    <script src="{% static "js/jquery.iphone.toggle.js" %}"></script>
+    <script src="{% static "js/retina.js" %}"></script>
     <!-- site js -->
     <script src="{% static "js/site.js" %}"></script>
 
