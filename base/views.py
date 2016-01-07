@@ -8,4 +8,4 @@ def home(request):
 
 
 def vivian(request):
-    return render_to_response('shops.html', RequestContext(request))
+    return render_to_response('vivian.html', RequestContext(request))

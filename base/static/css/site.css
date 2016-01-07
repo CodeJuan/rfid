@@ -82,3 +82,24 @@ td.data-more {
     vertical-align: middle;
 }
 
+
+/*
+ *
+ *
+ * page : RFID-lists
+ *
+ *
+ * */
+
+.padding-left {
+   overflow: hidden; 
+   padding:0.5rem;
+   border: 1px solid #ccc;
+}
+
+.padding-left .left-img {
+    width: 10%;
+    height:10%;
+    float: left;
+    margin-right: 2rem;
+} 
