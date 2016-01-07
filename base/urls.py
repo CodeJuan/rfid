@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^getproducts/', 'products.views.get_all_rfid'),
     url(r'^api/', include(RFIDResource().urls)),
     url(r'^api/v1/report/$', 'monitor.views.post_report'),
+    url(r'^api/products/checkin', 'products.views.checkin'),
 )
 
 

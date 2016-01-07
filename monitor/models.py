@@ -4,3 +4,4 @@ from django.db import models
 class Report(models.Model):
     RFID = models.CharField(max_length=12)
     AntennaID = models.CharField(max_length=20)
+    #IP from equipment

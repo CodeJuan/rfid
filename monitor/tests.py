@@ -20,6 +20,19 @@ def testPostReport():
     print r.status_code
     print r.json()
 
+def testCheckIn():
+    print 'CheckIn'
+    headers = {'content-type': 'application/json'}
+    payload = {'RFID': '555555555',
+                'AntennaID': '222222222',
+                'User': 'xiong',
+                'Shop': 1,
+                'Weight': 1.01}
+    r = requests.post('http://localhost:8000/api/products/checkin/', data=json.dumps(payload), headers=headers)
+    print r.status_code
+    print r.json()
+
 if __name__ == '__main__':
-    testPostReport()
-    test()
+    #testPostReport()
+    #test()
+    testCheckIn()
