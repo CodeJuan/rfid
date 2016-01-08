@@ -9,22 +9,78 @@
 <h1>RFID 列表</h1>
 <div class="RFIDls">
     <form id="RFIDlist" action="">
-        <select name="address" form="RFIDlist" class="select-down">
+        <select name="address" form="RFIDlist" class="select-down span2">
             <option value="">北京</option>
             <option value="">上海</option>
             <option value="">杭州</option>
             <option value="">福建</option>
         </select>
-        <select name="address" form="RFIDlist" class="select-down">
+        <select name="address" form="RFIDlist" class="select-down span2">
             <option value="">在库</option>
             <option value="">待销售</option>
             <option value="">已售</option>
             <option value="">调拨中</option>
         </select>
-        
-        <button type="submit" class="btn"> 查询</button>
+        <input class="input-medium span2" type="text" form="RFIDlist" placeholder="请输入 RFID "/>
+        <button type="submit" class="btn btn-rfid-long btn-primary"> 查询</button>
     </form>
 </div>
-
-
+<ul class="rfid-info-cards">
+    <li class="rfid-info-card">
+        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
+        <p class="right-text-info">
+            款式:<span class="type"> 戒指 </span> <br/>
+            RFID:<span><em>201987623405</em></span><br/>
+            标识:<span class="type">在库</span> <br/>
+            材质:<span>925</span><br/>
+            重量(g):<span>5</span> <br/>
+            尺寸(mm):<span>3</span>
+        </p>
+    </li>
+    <li class="rfid-info-card">
+        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
+        <p class="right-text-info">
+            款式:<span class="type"> 戒指 </span> <br/>
+            RFID:<span><em>201987623405</em></span><br/>
+            标识:<span class="type">在库</span> <br/>
+            材质:<span>925</span><br/>
+            重量(g):<span>5</span> <br/>
+            尺寸(mm):<span>3</span>
+        </p>
+    </li>
+    <li class="rfid-info-card">
+        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
+        <p class="right-text-info">
+            款式:<span class="type"> 戒指 </span> <br/>
+            RFID:<span><em>201987623405</em></span><br/>
+            标识:<span class="type">在库</span> <br/>
+            材质:<span>925</span><br/>
+            重量(g):<span>5</span> <br/>
+            尺寸(mm):<span>3</span>
+        </p>
+    </li>
+    <li class="rfid-info-card">
+        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
+        <p class="right-text-info">
+            款式:<span class="type"> 戒指 </span> <br/>
+            RFID:<span><em>201987623405</em></span><br/>
+            标识:<span class="type">在库</span> <br/>
+            材质:<span>925</span><br/>
+            重量(g):<span>5</span> <br/>
+            尺寸(mm):<span>3</span>
+        </p>
+    </li>
+</ul>
+<div class="pagination pagination-centered">
+    <ul>
+        <li><a href="#">上一页</a></li>
+        <li class="active">
+            <a href="#">1</a>
+        </li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">下一页</a></li>
+    </ul>
+</div>  
 {% endblock %}

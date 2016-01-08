@@ -1,3 +1,4 @@
+
 /code/manage.py syncdb --noinput
 bash /code/install.sh
 bash /code/run.sh

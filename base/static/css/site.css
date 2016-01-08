@@ -69,6 +69,7 @@ td.data-more {
  *  page : shops
  *
  **/
+
 .shops-p {
     line-height: 100%;
 }
@@ -91,15 +92,53 @@ td.data-more {
  *
  * */
 
-.padding-left {
-   overflow: hidden; 
-   padding:0.5rem;
-   border: 1px solid #ccc;
+
+#RFIDlist {
+    margin: 20px;
+    margin-left: 10%;
+}
+#RFIDlist select, #RFIDlist input{
+    margin-right: 2rem;
+}
+#RFIDlist input {
+    margin-bottom: 0;
 }
 
-.padding-left .left-img {
-    width: 10%;
-    height:10%;
+.btn-rfid-long {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+ul.rfid-info-cards {
+    list-style: none;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.rfid-info-card{
+    text-align: left;
+    display: inline-block;
+    padding:0.5rem;
+    border: 1px solid #ccc;
+    width: 35%;
+    min-width: 200px;
+    margin: 1% 4% ;
+}
+
+.left-img {
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+    height:45%;
     float: left;
-    margin-right: 2rem;
-} 
+    margin-right: 20px;
+}
+
+
+.right-text-info {
+    display:table-cell;
+    *display: inline-block;
+    width: 2000px;
+    *width: auto;
+}
+

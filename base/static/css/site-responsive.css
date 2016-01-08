@@ -45,3 +45,18 @@ h1 {
 		display: none;
 	}
 }
+
+
+/* page : RFIDlist */
+
+@media only screen and (max-width: 767px) {
+
+#RFIDlist {
+    margin: 0 20%;
+}
+#RFIDlist select, #RFIDlist input, #RFIDlist button{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+}

@@ -123,6 +123,7 @@ TEMPLATES = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = join(BASE_DIR, "media")
+PRODUCT_PHOTO = join(MEDIA_ROOT, "product-photo")
 
 
 # Auth (login)
