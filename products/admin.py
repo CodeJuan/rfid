@@ -13,10 +13,10 @@ class ProductDetailAdmin(admin.ModelAdmin):
 class ProductItemAdmin(admin.ModelAdmin):
     list_display = ('product_photo', 'rfid', 'weight', 'style', 'material')
 
-    fields = ('product_photo', 'rfid', 'weight',
-              'name', 'status', 'style', 'material',
-              'scale', 'notes')
-    readonly_fields = ('product_photo', 'rfid', 'weight')
+    #fields = ('photo', 'rfid', 'weight',
+    #          'name', 'status', 'style', 'material',
+    #         'scale', 'notes')
+    # readonly_fields = ('product_photo', 'rfid', 'weight')
 
     def product_photo(self, ins):
         return '<img src="%s" title="%s"/>' % (

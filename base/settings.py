@@ -1,10 +1,20 @@
 # -*- coding:utf-8 -*-
 from os.path import join, dirname
+import os
 
 
 BASE_DIR = dirname(dirname(__file__))
 DEBUG = True  # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
+
+try:
+    REDIS_ADDR = os.environ['REDIS_PORT_6379_TCP_ADDR']
+    REDIS_PORT=os.environ['REDIS_PORT_6379_TCP_PORT']
+    REDIS_PASSWORD=os.environ.get('REDIS_PASSWORD')
+except:
+    REDIS_ADDR = 'localhost'
+    REDIS_PORT=6379
+    REDIS_PASSWORD=''
 
 if DEBUG:  # DEV settings.
     TEMPLATE_DEBUG = True
@@ -58,6 +68,7 @@ INSTALLED_APPS = (
     'userena',
     'guardian',
     'easy_thumbnails',
+    'api',
     'accounts',
     'shops',
     'equipments',
