@@ -5,5 +5,5 @@ django-grappelli==2.7.1
 django-userena==1.4.1
 django-tastypie==0.12.2
 djangorestframework==3.3.2
-gidjango-thumbs
+django-thumbs
 redis==2.10.5
