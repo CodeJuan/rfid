@@ -77,6 +77,7 @@ INSTALLED_APPS = (
     'shops',
     'equipments',
     'products',
+    'django_rundirect',
 )
 
 SITE_ID = 1  # required if contrib.sites is present

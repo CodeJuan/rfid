@@ -6,4 +6,5 @@ else
     port=$1
 fi
 
+#python manage.py rundirect domonitor.py $port
 python manage.py runserver 0.0.0.0:$port

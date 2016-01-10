@@ -12,3 +12,4 @@ django-filter==0.12.0  # Filtering support
 django-thumbs
 # redis==2.10.5
 django-redis==4.2.0
+django_rundirect==0.2.0
