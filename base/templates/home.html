@@ -5,8 +5,8 @@
 
 
 {% block content %}
-<h1>RFID 监控</h1>
-<div class="RFIDsuper">
+<h1 class="small-h1">RFID 监控</h1>
+<div class="firstForm">
     <form id="RFIDsupervise" action="">
         <select name="address" form="RFIDsupervise" class="select-down">
             <option value="">北京</option>
@@ -14,7 +14,7 @@
             <option value="">杭州</option>
             <option value="">福建</option>
         </select>
- 	    <button type="submit" class="btn"> 开始监控</button>
+ 	    <button type="submit" class="btn btn-long"> 查看</button>
     </form>
 </div>
 
@@ -23,9 +23,9 @@
 	应监控数据：<span class="supervise">1000</span>
 	实时监控：<span class="current">999</span>
 </p>
-<div class="box-content">
-    <table class="table table-striped table-bordered bootstrap-datatable datatable td-center">
-        <caption>异常 RFID 明细</caption>
+<div class="box-content">       <!-- tableID : error-rfidTable     -->
+    <table id="error-rfidTable" class="table table-striped table-bordered bootstrap-datatable datatable td-center">
+        <caption class="error-rfid">异常 RFID 明细</caption>
         <thead>
             <tr>
                 <th>序号</th>
@@ -38,15 +38,15 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td class="">20102029302902</td>
-                <td class="center">分销门店1仓</td>
-                <td class="center">戒指</td>
-                <td class="center">情侣戒指</td>
+                <td> 20102029302902</td>
+                <td>分销门店1仓</td>
+                <td>戒指</td>
+                <td>情侣戒指</td>
             </tr>
         </tbody>
     </table>
 </div>
-<div class="box-content">
+<div class="box-content"> 
     <table class="table table-striped table-bordered bootstrap-datatable datatable td-center">
         <caption>天线运行状态</caption>
         <thead>

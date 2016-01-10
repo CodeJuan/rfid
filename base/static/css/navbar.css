@@ -86,11 +86,6 @@ h6 {
 	
 }
 
-.navbar-inner a {
-	color: #7b7b7b;
-	text-shadow: 0 -1px 1px #0b090a;
-}
-
 .navbar-inner a i {
 	margin-top: 2px;
 }
@@ -146,7 +141,6 @@ a.brand span {
 .header-nav a.btn  {
 	color: #fff !important;
 	text-shadow: none !important;
-	padding: 10px 25px !important;
 }
 
 .header-nav .btn .caret {
@@ -159,6 +153,9 @@ a.brand span {
 	border-bottom-color: #fff !important;
 }
 
+.container-fluid.header-container {
+    padding-right: 0px;
+}
 /* Navigation Section
 =================================================================== */
 

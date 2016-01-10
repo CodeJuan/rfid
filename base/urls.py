@@ -2,20 +2,16 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
-from products.api import RFIDResource
 
 urlpatterns = patterns('',
     url(r'^$', 'base.views.home', name='home'),
-    url(r'^vivian', 'base.views.vivian', name='vivian'),
+    url(r'^vivian/(.*)', 'base.views.vivian', name='vivian'),
+    url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^grappelli/', include('grappelli.urls')),  # grappelli
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^accounts/', include('userena.urls')),
     url(r'^api/', include('api.urls')),
     url(r'^shops/',  include('shops.urls')),
     url(r'^products/',  include('products.urls')),
-    url(r'^api/', include(RFIDResource().urls)),
-    url(r'^api/v1/report/$', 'monitor.views.post_report'),
-    url(r'^api/products/checkin', 'products.views.checkin'),
 )
 
 

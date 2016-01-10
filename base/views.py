@@ -7,5 +7,5 @@ def home(request):
     return render_to_response('home.html', RequestContext(request))
 
 
-def vivian(request):
-    return render_to_response('vivian.html', RequestContext(request))
+def vivian(request, filename):
+    return render_to_response('%s.html' % filename, RequestContext(request))

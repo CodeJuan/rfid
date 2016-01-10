@@ -1,86 +1,300 @@
 {% extends "base.html" %}
 
 
-{% block title %} RFID 列表 {% endblock %}
+{% block title %} 增添入库 {% endblock %}
 
 
 {% block content %}
+            
+                    <div class="box-content">
+                        <form class="form-horizontal" name="product-style" id="warehousing">
+                            <fieldset>
+                            <h2>入库信息</h2>
+                              <div class="control-group">
+                                <label class="control-label" for="select-home-type">入库类型</label>
+                                <div class="controls">
+                                  <select name="product-style" id="select-home-type">
+                                    <option>退货入库</option>
+                                    <option>直接入库</option>
+                                    <option>调拨入库</option>
+                                    <option>维修入库</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="selec-shop">入库仓库</label>
+                                <div class="controls">
+                                  <select name="product-style" id="select-shop">
+                                    <option>北京总仓</option>
+                                    <option>大明宫万达</option>
+                                  </select>
+                                </div>
+                            </div>
 
-<h1>RFID 列表</h1>
-<div class="RFIDls">
-    <form id="RFIDlist" action="">
-        <select name="address" form="RFIDlist" class="select-down span2">
-            <option value="">北京</option>
-            <option value="">上海</option>
-            <option value="">杭州</option>
-            <option value="">福建</option>
-        </select>
-        <select name="address" form="RFIDlist" class="select-down span2">
-            <option value="">在库</option>
-            <option value="">待销售</option>
-            <option value="">已售</option>
-            <option value="">调拨中</option>
-        </select>
-        <input class="input-medium span2" type="text" form="RFIDlist" placeholder="请输入 RFID "/>
-        <button type="submit" class="btn btn-rfid-long btn-primary"> 查询</button>
-    </form>
-</div>
-<ul class="rfid-info-cards">
-    <li class="rfid-info-card">
-        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
-        <p class="right-text-info">
-            款式:<span class="type"> 戒指 </span> <br/>
-            RFID:<span><em>201987623405</em></span><br/>
-            标识:<span class="type">在库</span> <br/>
-            材质:<span>925</span><br/>
-            重量(g):<span>5</span> <br/>
-            尺寸(mm):<span>3</span>
-        </p>
-    </li>
-    <li class="rfid-info-card">
-        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
-        <p class="right-text-info">
-            款式:<span class="type"> 戒指 </span> <br/>
-            RFID:<span><em>201987623405</em></span><br/>
-            标识:<span class="type">在库</span> <br/>
-            材质:<span>925</span><br/>
-            重量(g):<span>5</span> <br/>
-            尺寸(mm):<span>3</span>
-        </p>
-    </li>
-    <li class="rfid-info-card">
-        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
-        <p class="right-text-info">
-            款式:<span class="type"> 戒指 </span> <br/>
-            RFID:<span><em>201987623405</em></span><br/>
-            标识:<span class="type">在库</span> <br/>
-            材质:<span>925</span><br/>
-            重量(g):<span>5</span> <br/>
-            尺寸(mm):<span>3</span>
-        </p>
-    </li>
-    <li class="rfid-info-card">
-        <img class="left-img" src="../../media/product-photo/test-pic1.jpg"></img>
-        <p class="right-text-info">
-            款式:<span class="type"> 戒指 </span> <br/>
-            RFID:<span><em>201987623405</em></span><br/>
-            标识:<span class="type">在库</span> <br/>
-            材质:<span>925</span><br/>
-            重量(g):<span>5</span> <br/>
-            尺寸(mm):<span>3</span>
-        </p>
-    </li>        
-</ul>
-<div class="pagination pagination-centered">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li class="active">
-            <a href="#">1</a>
-        </li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
-</div>     
+                            <h2>商品基本信息</h2>
+                              <div class="control-group">
+                                <label class="control-label">款式</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio1" value="option1"> 项链
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio2" value="option2"> 吊坠
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option3"> 戒指
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option4"> 手链
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option5"> 衣饰
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option6"> 耳环
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option7"> 胸针
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option8"> 头饰
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option9"> 摆饰
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option10"> 挂饰
+                                  </label>
+                                </div>
+                              </div>
+
+                               <div class="control-group">
+                                <label class="control-label">材质</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio1" value="option1"> 925银
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option2"> 14K白金
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option3"> 14K黄金
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option4"> 14K玫瑰金
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option5"> 18K白金
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option6"> 18K黄金
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option7"> 18K玫瑰金
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option8"> 24K金
+                                  </label> 
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-material" id="inlineradio2" value="option9"> 铂金
+                                  </label>
+                        
+                                </div>
+                              </div>
+
+                               <div class="control-group">
+                                <label class="control-label">镶嵌</label>
+                                <div class="controls">
+                                  <label class="checkbox inline">
+                                    <input type="checkbox" name="product-beset" id="inlinecheckbox1" value="option1"> 钻石
+                                  </label>
+                                  <label class="checkbox inline">
+                                    <input type="checkbox" name="product-beset" id="inlinecheckbox2" value="option2"> 锆石
+
+                                  </label>
+                                  <label class="checkbox inline">
+                                    <input type="checkbox" name="product-beset" id="inlinecheckbox3" value="option3"> 红宝石
+
+                                  </label>
+                                   <label class="checkbox inline">
+                                    <input type="checkbox" name="product-beset" id="inlinecheckbox3" value="option3"> 蓝宝石
+
+                                  </label>
+                                   <label class="checkbox inline">
+                                    <input type="checkbox" name="product-beset" id="inlinecheckbox3" value="option3"> 翡翠
+
+                                  </label>
+                                   <label class="checkbox inline">
+                                    <input type="checkbox" name="product-beset" id="inlinecheckbox3" value="option3"> 玉石
+                                  </label>
+
+                                </div>
+                              </div>
+
+
+                               <div class="control-group">
+                                <label class="control-label">形状</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio1" value="option1"> 圆形
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio2" value="option2"> 水滴形
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio3" value="option3"> 短米形
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio3" value="option3"> 长米形
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio3" value="option3"> 扁形
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio3" value="option3"> 异形
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-shape" id="inlineradio3" value="option3"> 四面
+                                  </label>
+                                </div>
+                              </div>
+
+
+                               <div class="control-group">
+                                <label class="control-label">颜色</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio1" value="option1"> 白色
+
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio2" value="option2"> 粉色
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio3" value="option3"> 紫色
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio3" value="option3"> 黄色
+                                  </label>
+                                 
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio3" value="option3"> 金色
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio3" value="option3"> 黑色
+                                  </label>
+                                   <label class="radio inline">
+                                    <input type="radio" name="product-color" id="inlineradio3" value="option3"> 怪色
+                                  </label>
+                                </div>
+                              </div>
+
+
+                               <div class="control-group">
+                                <label class="control-label">光泽</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-lustre" id="inlineradio1" value="option1"> 强光
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-lustre" id="inlineradio2" value="option2"> 中光
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-lustre" id="inlineradio3" value="option3"> 弱光
+                                  </label>
+                                </div>
+                              </div>
+
+
+                               <div class="control-group">
+                                <label class="control-label">光洁</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio1" value="option1"> 无暇
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio2" value="option2"> 微瑕
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-style" id="inlineradio3" value="option3"> Option 3
+                                  </label>
+                                </div>
+                              </div>
+
+
+                               <div class="control-group">
+                                <label class="control-label">种类</label>
+                                <div class="controls">
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-type" id="inlineradio1" value="option1"> 圆形
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-type" id="inlineradio2" value="option2"> 圆形
+                                  </label>
+                                  <label class="radio inline">
+                                    <input type="radio" name="product-type" id="inlineradio3" value="option3"> 圆形
+                                  </label>
+                                </div>
+                              </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="size">尺寸( mm )</label>
+                                <div class="controls">
+                                    <input class="input-xlarge disabled" name="product-size" id="size" type="text" value=""/>
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                 <label class="control-label" for="weight">珠量( g )</label>
+                                 <div class="controls">
+                                     <input class="input-xlarge focused" id="weight" type="text" value=""/>
+                                 </div>
+                              </div>
+                              <div class="control-group">
+                                  <label class="control-label" for="product-name">商品名称</label>
+                                <div class="controls">
+                                    <input class="input-xlarge focused" id="product-name" type="text" value=""/>
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                  <label class="control-label" for="rfid">RFID 标签</label>
+                                <div class="controls">
+                                    <input class="input-xlarge focused" id="rfid" type="text" value=""/>
+                                    <a href="javascript:void(0);" onclick="">RFID 读入</a>
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <label class="control-label" for="weight">重量</label>
+                                <div class="controls">
+                                    <input class="input-xlarge focused" id="weight" type="text" value=""/>
+                                    <a href="javascript:void(0);" onclick="">称重</a>
+                                </div>
+                              </div>  
+
+                            <div class="control-group">
+                              <label class="control-label" for="upload-pic">图片</label>
+                              <div class="controls">
+                                    <input class="input-xlarge" name="product-style" id="upload-pic" type="file" />                                 
+                                    <a href="javascript:void(0);" onclick="">拍照</a>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="ps">备注</label>
+                                <div class="controls">
+                                    <textarea rows="4" id="ps"></textarea>
+                                </div>
+                              </div>                        
+          
+
+                              <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">确定入库</button>
+                                <button type="submit" class="btn btn-primary">确定入库并上架</button>
+                                <button class="btn">取消</button>
+                              </div>
+
+                            </fieldset>
+                          </form>
+                    
+                    </div>
+            
 {% endblock %}

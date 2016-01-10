@@ -4,6 +4,11 @@ django==1.8
 django-grappelli==2.7.1
 django-userena==1.4.1
 django-tastypie==0.12.2
+
 djangorestframework==3.3.2
+markdown==2.3.1  # Markdown support for the browsable API.
+django-filter==0.12.0  # Filtering support
+
 django-thumbs
-redis==2.10.5
+# redis==2.10.5
+django-redis==4.2.0

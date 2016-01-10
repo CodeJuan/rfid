@@ -1,10 +1,10 @@
 #-*- coding:utf-8 -*-
 from django.conf.urls import patterns, include, url
+from rest_framework.urlpatterns import format_suffix_patterns
+from products import views
 
 
-urlpatterns = (
-    #url(r'^/products$', 'products.views.report_rfid'),
-    url(r'^$', 'products.views.report_rfid', name=''),
-    #url(r'^getproducts/', 'products.views.get_all_rfid'),
-    url(r'^ProductItems$', 'products.views.getProductItems', name='ProductItems'),
-)
+urlpatterns = format_suffix_patterns([
+    url(r'^$', views.ProductItemList.as_view()),
+    url(r'^(?P<pk>[0-9]+)/$', views.ProductItemDetail.as_view()),
+])

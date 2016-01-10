@@ -7,14 +7,19 @@ BASE_DIR = dirname(dirname(__file__))
 DEBUG = True  # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
 
-try:
-    REDIS_ADDR = os.environ['REDIS_PORT_6379_TCP_ADDR']
-    REDIS_PORT=os.environ['REDIS_PORT_6379_TCP_PORT']
-    REDIS_PASSWORD=os.environ.get('REDIS_PASSWORD')
-except:
-    REDIS_ADDR = 'localhost'
-    REDIS_PORT=6379
-    REDIS_PASSWORD=''
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+
+RFID_LIFETIME = 3*60  # 3 min
 
 if DEBUG:  # DEV settings.
     TEMPLATE_DEBUG = True
@@ -65,11 +70,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',  # multi sites. userena required
-    'userena',
-    'guardian',
+    'rest_framework',
     'easy_thumbnails',
     'api',
-    'accounts',
+    # 'accounts',
     'shops',
     'equipments',
     'products',
@@ -134,25 +138,15 @@ TEMPLATES = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = join(BASE_DIR, "media")
-PRODUCT_PHOTO = join(MEDIA_ROOT, "product-photo")
+PRODUCT_PHOTO = "product-photo"  # upload_to, relative path to MEDIA_ROOT
 
 
 # Auth (login)
+LOGIN_REDIRECT_URL = '/'
 
 AUTHENTICATION_BACKENDS = (
-    'userena.backends.UserenaAuthenticationBackend',
-    'guardian.backends.ObjectPermissionBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
-
-ANONYMOUS_USER_ID = -1
-AUTH_PROFILE_MODULE = 'accounts.UserProfile'
-USERENA_SIGNIN_REDIRECT_URL = '/accounts/%(username)s/'
-LOGIN_URL = '/accounts/signin/'
-LOGOUT_URL = '/accounts/signout/'
-USERENA_ACTIVATION_REQUIRED = False
-USERENA_USE_MESSAGES = False
-USERENA_SIGNIN_AFTER_SIGNUP = True
 
 
 try:

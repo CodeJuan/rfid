@@ -6,23 +6,23 @@
 
 {% block content %}
 
-<h1>RFID 列表</h1>
-<div class="RFIDls">
+<h1 class="small-h1">RFID 列表</h1>
+<div class="firstForm">
     <form id="RFIDlist" action="">
-        <select name="address" form="RFIDlist" class="select-down span2">
+        <select name="address" form="RFIDlist" class="select-down">
             <option value="">北京</option>
             <option value="">上海</option>
             <option value="">杭州</option>
             <option value="">福建</option>
         </select>
-        <select name="address" form="RFIDlist" class="select-down span2">
+        <select name="address" form="RFIDlist" class="select-down">
             <option value="">在库</option>
             <option value="">待销售</option>
             <option value="">已售</option>
             <option value="">调拨中</option>
         </select>
-        <input class="input-medium span2" type="text" form="RFIDlist" placeholder="请输入 RFID "/>
-        <button type="submit" class="btn btn-rfid-long btn-primary"> 查询</button>
+        <input class="input-medium span3" type="text" form="RFIDlist" placeholder="输入/查询 RFID 生命周期"/>
+        <button type="submit" class="btn btn-long btn-primary"> 查询</button>
     </form>
 </div>
 <ul class="rfid-info-cards">

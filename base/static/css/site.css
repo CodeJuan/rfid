@@ -1,35 +1,74 @@
-
-/*    page : RFIDsupervise   */
-
+/*    ALL     */
 h1 {
     text-align: center;
 }
+
+.small-h1 {
+    font-size: 25px;
+}
+
+
+/*
+ *
+ *     page : sign in    
+ *
+ *
+ **/
+
+.form-signin .input-group, 
+.form-signin .checkbox,
+.form-signin .form-actions {
+    text-align: center;
+}
+.form-signin .forgot-password {
+    margin:10px 0;
+}
+/*
+ *
+ *  page : RFIDsupervise
+ *
+ *
+ * */
 
 .select-down {
     margin-bottom: 0px;
 }
 
 /* form  */
-.RFIDsuper {
-   margin: 30px auto; 
-}
-
-#RFIDsupervise {
-    text-align: center;
+.firstForm {
+   margin: 45px auto; 
+   text-align: center;
 }
 
 #RFIDsupervise button{
     margin-left: 10%;
 }
 /* data */
+
 .RFIDsupervise-data span:not(:last-child){
     margin-right: 5%;
 }
+
+p.RFIDsupervise-data:after {
+    display: block;
+    content:'';
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #ABA8A8; 
+}
 /* table */
 
+p.RFIDsupervise-data + .box-content{
+    margin-top: 55px;
+}
 .td-center th, .td-center td{
     text-align: center;
 }
+
+#error-rfidTable td{
+    color: #EF0909;
+}
+
 span.error{
     color: #ff0033;
     font-size: 1.5rem;
@@ -37,7 +76,8 @@ span.error{
 }
 
 caption {
-    padding: 10px 0;
+    padding: 20px 0;
+
 }
 
 .box-content {
@@ -59,7 +99,9 @@ td.data-more {
     color: #00dd00;
 } 
 
-#product-check caption {
+#product-check caption,
+#product-shelves caption,
+#shop-list caption {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -83,7 +125,6 @@ td.data-more {
     vertical-align: middle;
 }
 
-
 /*
  *
  *
@@ -92,21 +133,16 @@ td.data-more {
  *
  * */
 
-
-#RFIDlist {
-    margin: 20px;
-    margin-left: 10%;
-}
 #RFIDlist select, #RFIDlist input{
-    margin-right: 2rem;
+    margin-right: 3%;
 }
 #RFIDlist input {
     margin-bottom: 0;
 }
 
-.btn-rfid-long {
-    padding-left: 2rem;
-    padding-right: 2rem;
+.btn-long {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 ul.rfid-info-cards {
@@ -121,7 +157,7 @@ ul.rfid-info-cards {
     padding:0.5rem;
     border: 1px solid #ccc;
     width: 35%;
-    min-width: 200px;
+    min-width: 105px;
     margin: 1% 4% ;
 }
 
@@ -134,7 +170,6 @@ ul.rfid-info-cards {
     margin-right: 20px;
 }
 
-
 .right-text-info {
     display:table-cell;
     *display: inline-block;
@@ -142,3 +177,49 @@ ul.rfid-info-cards {
     *width: auto;
 }
 
+/*
+ *
+ *
+ * warehousing
+ *
+ *
+ *
+ * */
+
+/*
+ *
+ *
+ * warehouse--Add
+ * warehouse--reduce
+ *
+ *
+ * */
+
+#warehouse-add h2 {
+    margin: 30px 20px;
+    color: rgba(232, 30, 43, 0.91);
+}
+
+.form-actions {
+    background-color: #fff;
+    border-top: 0px;
+}
+#warehouse-add .checkbox.inline, 
+#warehouse-add .radio.inline {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+label.radio.inline{
+    padding-left: 20px;
+}
+.form-horizontal .controls{
+    margin-left: 180px;
+}
+#warehouse-add #ps,
+#warehouse-reduce #ps {
+    width:270px; 
+}
+#warehouse-add a {
+    color: rgba(0, 124, 204, 0.93);
+    text-decoration: underline;
+}

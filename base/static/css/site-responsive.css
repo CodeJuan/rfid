@@ -6,14 +6,23 @@
 body {
     font-size: 12px;
 }
-
 h1 {
     font-size: 2rem;
 }
-#RFIDsupervise button{
-    margin: 0 auto;
 }
 
+/*   page : supervise */
+
+@media only screen and (max-width: 480px) {
+#RFIDsupervise button {
+    margin: 0 auto;
+}
+}
+
+@media only screen and (max-width: 358px) {
+#RFIDsupervise button {
+    margin-top: 20px;
+}
 }
 
 /* page : product-check */
@@ -31,7 +40,6 @@ h1 {
 	#product-check td:nth-child(4) {
 		display: none;
 	}
-
 	#product-check th:nth-child(3) {
 		display: none;
 	}
@@ -45,11 +53,20 @@ h1 {
 		display: none;
 	}
 }
-
-
 /* page : RFIDlist */
 
-@media only screen and (max-width: 767px) {
+@media (min-width: 580px) and (max-width: 1230px) {  
+    .rfid-info-card {
+        width: 200px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1050px) {  
+    .btn-long {
+        margin: 2%; 
+    }
+    
+}
+@media only screen and (max-width:767px) {
 
 #RFIDlist {
     margin: 0 20%;
@@ -58,5 +75,56 @@ h1 {
     margin-bottom: 1rem;
     width: 100%;
 }
+}
 
+/*
+ *
+ *
+ * page : warehousing
+ *
+ *
+ *
+ * */
+
+/*
+ *
+ *
+ * page : warehouse--Add
+ * page : warehouse--reduce
+ *
+ *
+ * */
+
+
+@media only screen and (max-width: 767px) {
+    #warehouse-add .input-xlarge,
+    #warehouse-reduce .input-xlarge {
+        width: 270px;
+    }
+}
+@media (max-width: 480px) {
+    #warehouse-add select,
+    #warehouse-add .input-xlarge,
+    #warehouse-add #ps,
+    #warehouse-reduce select,
+    #warehouse-reduce .input-xlarge,
+    #warehouse-reduce #ps{
+        width: 100%;
+    }
+    #warehouse-add h2{
+        margin-left: 0px; 
+    }
+
+    .form-horizontal .controls{
+        margin-left:0px;
+    }
+    #warehouse-add #ps,
+    #warehouse-reduce #ps{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+    }
+    .form-actions {
+        text-align: center;
+    }
 }

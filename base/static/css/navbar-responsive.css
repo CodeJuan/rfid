@@ -97,6 +97,10 @@
 		width: 8.334% !important;
 	}
 	
+    #sidebar-left .font-table {
+        font-size: 12px; 
+    }
+
 	.sidebar-nav > ul{
 		margin: 0px;
 	}

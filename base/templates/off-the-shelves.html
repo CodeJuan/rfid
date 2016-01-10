@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block title %} 上柜 {% endblock %}
+
+
+{% block content %}
+
+<div class="box-content">
+    <form class="form-horizontal" id="off-the-shelves">    <!-- formID : off-the-shelves -->
+        <fieldset>
+        <legend>下柜</legend>
+            <div class="control-group">
+                <label class="control-label" for="off-shop">仓库</label>
+                <div class="controls">
+                    <select id="off-shop">
+                        <option value="0">李家村万达老凤祥</option>
+                        <option value="1">大明宫万达</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="rfid">RFID </label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="rfid" type="text" value=""/>
+                    <a href="javascript:void(0);" onclick="">RFID 读入</a>
+                </div>
+            </div>     
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">确定保存</button>
+                <button class="btn">取消</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %} 添加出库 {% endblock %}
+
+
+{% block content %}
+
+<div class="box-content">
+    <form class="form-horizontal" id="warehouse-reduce">    <!-- formID : warehouse-reduce -->
+        <fieldset>
+        <legend>添加出库</legend>
+            <div class="control-group">
+                <label class="control-label" for="reduce-style">仓库</label>
+                <div class="controls">
+                    <select id="reduce-style">                          <!-- selectID : reduce-style -->
+                        <option value="0">销售出库</option>
+                        <option value="1">调拨出库</option>
+                        <option value="2">维修出库</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="rfid">RFID </label>
+                <div class="controls">
+                    <input class="input-xlarge focused" id="rfid" type="text" value=""/>
+                    <a href="javascript:void(0);" onclick="">RFID 读入</a>
+                </div>
+            </div>     
+            <div class="control-group">
+                <label class="control-label" for="ps">出库备注</label>
+                <div class="controls">
+                    <textarea rows="4" id="ps"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">确定出库</button>
+                <button class="btn">取消</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
+
+

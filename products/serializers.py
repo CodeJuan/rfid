@@ -1,9 +1,8 @@
+# -*- coding:utf-8 -*-
 from rest_framework import serializers
-from products.models import CheckIn
+from products.models import ProductItem
 
 
-class CheckinSerializer(serializers.ModelSerializer):
-
+class ProductItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CheckIn
-        fields = ('RFID', 'AntennaID', 'User', 'Shop', 'Weight')
+        model = ProductItem

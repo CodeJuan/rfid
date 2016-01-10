@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block title %} 上柜／下柜 {% endblock %}
+
+
+{% block content %}
+
+<a class="btn btn-primary" href="javascript:void(0);" target="_blank" onclick=""> 上柜 </a>
+<a class="btn btn-primary" href="javascript:void(0);" target="_blank" onclick=""> 下柜 </a>
+<div class="box-content">
+    <table id="product-shelves" class="table table-striped table-bordered bootstrap-datatable datatable td-center">     <!-- tableID : product-shelves -->
+        <caption>上/下柜明细</caption>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>日期</th>                    
+                <th>RFID 数量</th>
+                <th>类型</th>
+                <th>上柜人</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2015/12/13</td>
+                <td>2</td>
+                <td>上柜</td>
+                <td>小明</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2015/12/22</td>
+                <td>5</td>
+                <td>下柜</td>
+                <td>小李</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
